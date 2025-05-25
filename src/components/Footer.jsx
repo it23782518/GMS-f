@@ -57,7 +57,7 @@ const Footer = () => {
             </div>
             <div className="grid grid-cols-2 gap-x-4 gap-y-2">
               <Link 
-                to="/equipment-list" 
+                to="/" 
                 className="text-rose-200 hover:text-white transition-colors duration-200 text-xs flex items-center touch-target"
               >
                 <svg className="w-3 h-3 mr-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -67,10 +67,11 @@ const Footer = () => {
                     clipRule="evenodd"
                   ></path>
                 </svg>
-                <span>View Equipment</span>
+                <span>Home</span>
               </Link>
+              <br />
               <Link 
-                to="/maintenance-list" 
+                to="/login" 
                 className="text-rose-200 hover:text-white transition-colors duration-200 text-xs flex items-center touch-target"
               >
                 <svg className="w-3 h-3 mr-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -80,33 +81,7 @@ const Footer = () => {
                     clipRule="evenodd"
                   ></path>
                 </svg>
-                <span>Maintenance</span>
-              </Link>
-              <Link 
-                to="/maintenance-cost" 
-                className="text-rose-200 hover:text-white transition-colors duration-200 text-xs flex items-center touch-target"
-              >
-                <svg className="w-3 h-3 mr-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    fillRule="evenodd"
-                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                    clipRule="evenodd"
-                  ></path>
-                </svg>
-                <span>Maintenance Cost</span>
-              </Link>
-              <Link 
-                to="/tickets" 
-                className="text-rose-200 hover:text-white transition-colors duration-200 text-xs flex items-center touch-target"
-              >
-                <svg className="w-3 h-3 mr-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    fillRule="evenodd"
-                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                    clipRule="evenodd"
-                  ></path>
-                </svg>
-                <span>View Ticket</span>
+                <span>Login</span>
               </Link>
             </div>
           </div>
@@ -147,11 +122,9 @@ const Footer = () => {
           <div className="mt-3 md:mt-0 flex items-center">
             <span className="bg-rose-800 bg-opacity-40 px-3 py-1 rounded-full text-xs">Version 1.2.0</span>
           </div>
-        </div>
-      </div>
+        </div>      </div>
       
-      <style>
-        {`
+      <style>{`
         .touch-target {
           min-height: 32px;
           display: flex;
@@ -163,8 +136,7 @@ const Footer = () => {
             min-height: 44px;
           }
         }
-        `}
-      </style>
+      `}</style>
     </footer>
   );
 };

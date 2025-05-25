@@ -1,51 +1,53 @@
-import axios from "axios";
+import api from './api';
 
 const BASE_URL = "http://localhost:8090";
 
-export const getAllTickets = async () => {
-  return axios.get(`${BASE_URL}/api/tickets`);
-};
-
-export const getTicketDetails = async (ticketId) => {
-  return axios.get(`${BASE_URL}/api/tickets/${ticketId}`);
-};
-
+// Ticket API calls
 export const addTicket = async (ticketData) => {
-  return axios.post(`${BASE_URL}/api/tickets`, ticketData);
-};
-
-export const assignTicket = async (ticketId, staffId) => {
-  return axios.put(`${BASE_URL}/api/tickets/${ticketId}/assign?staffId=${staffId}`);
+  return api.post(`/tickets`, ticketData);
 };
 
 export const updateTicketStatus = async (ticketId, status) => {
-  return axios.put(`${BASE_URL}/api/tickets/${ticketId}/status?status=${status}`);
-};
-
-export const searchTicketsById = async (ticketId) => {
-  return axios.get(`${BASE_URL}/api/tickets/${ticketId}`);
+  return api.put(`/tickets/${ticketId}/status?status=${status}`);
 };
 
 export const searchTicketsByStaffId = async (staffId) => {
-  return axios.get(`${BASE_URL}/api/tickets/assigned-to/staff/${staffId}`);
+  return api.get(`/tickets/assigned-to/staff/${staffId}`);
+};
+
+export const getTicketsRaisedByStaff = async (staffId) => {
+  return api.get(`/tickets/raised-by/staff/${staffId}`);
+};
+
+export const getTicketsRaisedByMember = async (memberId) => {
+  // This will use the same endpoint but will be interpreted differently on the backend
+  return api.get(`/tickets/raised-by/member/${memberId}`);
+};
+
+export const getTicketsAssignedToStaff = async (staffId) => {
+  return api.get(`/tickets/assigned-to/staff/${staffId}`);
+};
+
+export const getAllTickets = async () => {
+  return api.get('/tickets');
 };
 
 export const filterTicketsByStatus = async (status) => {
-  return axios.get(`${BASE_URL}/api/tickets/filter-by-status?status=${status}`);
-}
+  return api.get(`/tickets/filter-by-status?status=${status}`);
+};
 
 export const filterTicketsByPriority = async (priority) => {
-  return axios.get(`${BASE_URL}/api/tickets/filter-by-priority?priority=${priority}`);
-}
+  return api.get(`/tickets/filter-by-priority?priority=${priority}`);
+};
 
-export const getTicketsRaisedByMember = async (memberId) => {
-  return axios.get(`${BASE_URL}/api/tickets/raised-by/member/${memberId}`);
-}
+export const getTicketCountBystaffId = async (staffId) => {
+  return api.get(`/tickets/count-by-status-staff?status=IN_PROGRESS&staffId=${staffId}`);
+};
 
-export const getTicketsRaisedByStaff = async (staffId) => {
-  return axios.get(`${BASE_URL}/api/tickets/raised-by/staff/${staffId}`);
-}
+export const getTicketCountByStatus = async (status) => {
+  return api.get(`/tickets/count-by-status?status=${status}`);
+};
 
-export const getOpenTicketsCount = async () => {
-  return axios.get(`${BASE_URL}/api/tickets/count-by-status?status=OPEN`);
-}
+export const assignTicket = async (ticketId, staffId) => {
+  return api.put(`/tickets/${ticketId}/assign?staffId=${staffId}`);
+};
