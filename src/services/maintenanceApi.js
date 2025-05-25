@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:8090";
+const BASE_URL = "http://gms-b-production.up.railway.app";
 
 export const addMaintenanceSchedule = async (maintenanceSchedule) => {
   return axios.post(`${BASE_URL}/api/maintenance-schedule`, maintenanceSchedule);

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-rose-900 to-rose-800 py-8 sm:py-10 md:py-12 text-center text-sm text-rose-100 relative mt-8 sm:mt-10 md:mt-12">

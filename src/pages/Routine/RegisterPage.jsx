@@ -43,7 +43,7 @@ const RegisterPage = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:8090/api/members/register', {
+      const response = await fetch('http://gms-b-production.up.railway.app/api/members/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

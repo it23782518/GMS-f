@@ -24,7 +24,7 @@ const Payments = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8090/api/payments', null, {
+      const response = await axios.post('http://gms-b-production.up.railway.app/api/payments', null, {
         params: {
           memberId: formData.memberId,
           amount: formData.amount,

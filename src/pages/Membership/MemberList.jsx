@@ -17,7 +17,7 @@ const MemberList = () => {
 
   const fetchMembers = async () => {
     try {
-      const response = await fetch('http://localhost:8090/api/members');
+      const response = await fetch('http://gms-b-production.up.railway.app/api/members');
       if (!response.ok) {
         throw new Error('Failed to fetch members');
       }

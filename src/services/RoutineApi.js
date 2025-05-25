@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8090/api';
+const API_URL = 'http://gms-b-production.up.railway.app/api';
 
 export const fetchMembers = async () => {
     try {

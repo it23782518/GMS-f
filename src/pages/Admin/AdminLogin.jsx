@@ -21,7 +21,7 @@ const AdminLogin = () => {
 
         try {
             // Using axios directly here since we're not authenticated yet
-            const response = await axios.post('http://localhost:8090/api/admin/login', {
+            const response = await axios.post('http://gms-b-production.up.railway.app/api/admin/login', {
                 email,
                 password
             });            if (response.data && response.data.token) {

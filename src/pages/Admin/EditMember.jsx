@@ -21,7 +21,7 @@ const EditMember = () => {
         const fetchMember = async () => {
             try {
                 const token = localStorage.getItem('token');
-                const response = await axios.get(`http://localhost:8090/api/members/${id}`, {
+                const response = await axios.get(`http://gms-b-production.up.railway.app/api/members/${id}`, {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
@@ -57,7 +57,7 @@ const EditMember = () => {
         e.preventDefault();
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.put(`http://localhost:8090/api/members/${id}`, formData, {
+            const response = await axios.put(`http://gms-b-production.up.railway.app/api/members/${id}`, formData, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }            });

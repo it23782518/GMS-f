@@ -3,7 +3,7 @@ import authService from './authService';
 
 // Create an axios instance with a base URL
 const api = axios.create({
-  baseURL: 'http://localhost:8090/api',
+  baseURL: 'http://gms-b-production.up.railway.app/api',
 });
 
 // Add a request interceptor to include the auth token
