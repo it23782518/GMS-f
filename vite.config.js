@@ -8,6 +8,9 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
+  server: {
+    historyApiFallback: true,
+  },
   extend: {
     animation: {
       fadeIn: 'fadeIn 0.3s ease-in-out',
