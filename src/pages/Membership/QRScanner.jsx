@@ -38,7 +38,7 @@ const QRScanner = () => {
                 
                 // Mark attendance
                 const token = localStorage.getItem('token');
-                axios.post(`https://gms-b-production.up.railway.app/api/attendance/mark/${memberId}`, {}, {
+                axios.post(`http://gms-b-production.up.railway.app/api/attendance/mark/${memberId}`, {}, {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }

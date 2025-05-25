@@ -14,7 +14,7 @@ const MemberDashboard = () => {
     const fetchMemberData = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get(`https://gms-b-production.up.railway.app/api/members/${id}`, {
+        const response = await axios.get(`http://gms-b-production.up.railway.app/api/members/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -100,7 +100,7 @@ const MemberDashboard = () => {
     }
   };
 
-  const qrValue = `https://gms-b-production.up.railway.app/api/members/verify/${id}`;
+  const qrValue = `http://gms-b-production.up.railway.app/api/members/verify/${id}`;
 
   return (
     <div className="p-6 max-w-6xl mx-auto">

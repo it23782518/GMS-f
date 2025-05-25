@@ -24,7 +24,7 @@ const LoginPage = () => {
     setError('');
 
     try {
-      const response = await fetch('https://gms-b-production.up.railway.app/api/members/login', {
+      const response = await fetch('http://gms-b-production.up.railway.app/api/members/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

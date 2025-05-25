@@ -106,7 +106,7 @@ const RegisterPage = () => {
         dateOfBirth: formData.dateOfBirth ? new Date(formData.dateOfBirth).toISOString().split('T')[0] : null
       };
 
-      const response = await fetch('https://gms-b-production.up.railway.app/api/members/register', {
+      const response = await fetch('http://gms-b-production.up.railway.app/api/members/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -1,6 +1,6 @@
 import api from './api';
 
-const BASE_URL = "https://gms-b-production.up.railway.app";
+const BASE_URL = "http://gms-b-production.up.railway.app";
 
 // Register a new member
 export const registerMember = async (memberData) => {
