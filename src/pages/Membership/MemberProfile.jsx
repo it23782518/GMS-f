@@ -13,7 +13,7 @@ const MemberProfile = () => {
     const fetchMemberProfile = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get(`http://gms-b-production.up.railway.app/api/members/${id}`, {
+        const response = await axios.get(`https://gms-b-production.up.railway.app/api/members/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -42,7 +42,7 @@ const MemberProfile = () => {
     e.preventDefault();
     try {
       const token = localStorage.getItem('token');
-      await axios.put(`http://gms-b-production.up.railway.app/api/members/${id}`, member, {
+      await axios.put(`https://gms-b-production.up.railway.app/api/members/${id}`, member, {
         headers: {
           Authorization: `Bearer ${token}`
         }

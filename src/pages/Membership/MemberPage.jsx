@@ -32,7 +32,7 @@ const MemberPage = () => {
       }
 
       try {
-        const response = await axios.get(`http://gms-b-production.up.railway.app/api/members/${storedMemberId}`, {
+        const response = await axios.get(`https://gms-b-production.up.railway.app/api/members/${storedMemberId}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }

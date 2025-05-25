@@ -27,7 +27,7 @@ const MembersList = () => {
       }
 
       try {
-        const response = await axios.get('http://gms-b-production.up.railway.app/api/members', {
+        const response = await axios.get('https://gms-b-production.up.railway.app/api/members', {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -126,7 +126,7 @@ const MembersList = () => {
   const handleDelete = async (memberId) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.delete(`http://gms-b-production.up.railway.app/api/members/${memberId}`, {
+      const response = await axios.delete(`https://gms-b-production.up.railway.app/api/members/${memberId}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }

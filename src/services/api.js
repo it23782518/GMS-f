@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'http://gms-b-production.up.railway.app/api',
+    baseURL: 'https://gms-b-production.up.railway.app/api',
     headers: {
         'Content-Type': 'application/json'
     }

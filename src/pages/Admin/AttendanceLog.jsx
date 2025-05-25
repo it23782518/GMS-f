@@ -12,7 +12,7 @@ const AttendanceLog = () => {
     const fetchAttendance = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://gms-b-production.up.railway.app/api/attendance/all', {
+        const response = await axios.get('https://gms-b-production.up.railway.app/api/attendance/all', {
           headers: {
             Authorization: `Bearer ${token}`
           }
