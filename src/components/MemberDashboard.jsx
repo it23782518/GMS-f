@@ -14,7 +14,7 @@ const MemberDashboard = () => {
     const fetchMemberData = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get(`http://gms-b-production.up.railway.app/api/members/${id}`, {
+        const response = await axios.get(`https://gms-b-production.up.railway.app/api/members/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }

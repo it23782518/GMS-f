@@ -27,7 +27,7 @@ const MembersList = () => {
       }
 
       try {
-        const response = await axios.get('http://gms-b-production.up.railway.app/api/members', {
+        const response = await axios.get('https://gms-b-production.up.railway.app/api/members', {
           headers: {
             Authorization: `Bearer ${token}`
           }

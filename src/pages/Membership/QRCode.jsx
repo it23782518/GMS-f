@@ -20,7 +20,7 @@ const QRCodePage = () => {
       }
 
       try {
-        const response = await axios.get(`http://gms-b-production.up.railway.app/api/members/${memberId}`, {
+        const response = await axios.get(`https://gms-b-production.up.railway.app/api/members/${memberId}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -71,7 +71,7 @@ const QRCodePage = () => {
     );
   }
 
-  const qrValue = `http://gms-b-production.up.railway.app/api/members/verify/${memberId}`;
+  const qrValue = `https://gms-b-production.up.railway.app/api/members/verify/${memberId}`;
 
   return (
     <div className="max-w-md mx-auto p-6 bg-white rounded-xl shadow-lg">

@@ -26,9 +26,7 @@ const AdminLogin = () => {
     setLoading(true);
 
     try {
-      console.log('Submitting login with:', formData);
-
-      const response = await fetch('http://gms-b-production.up.railway.app/api/staff/login', {
+      console.log('Submitting login with:', formData);      const response = await fetch('https://gms-b-production.up.railway.app/api/staff/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
