@@ -22,7 +22,7 @@ const ViewRoutine = () => {
             try {
                 // Validate memberId before making the API call
                 if (!memberId) {
-                    setError('Member ID is missing. Please select a valid member.');
+                    setError('Member ID is missing. Please select F valid member.');
                     setLoading(false);
                     return;
                 }

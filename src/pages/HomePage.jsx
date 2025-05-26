@@ -106,12 +106,6 @@ const HomePage = () => {
               >
                 Login
               </Link>
-              <Link
-                to="/register"
-                className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white text-lg font-semibold rounded-lg border border-white/20 hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 transition-all duration-200 transform hover:scale-105 active:scale-95"
-              >
-                Register
-              </Link>
             </div>
           </div>
         );
