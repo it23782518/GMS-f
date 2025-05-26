@@ -80,7 +80,7 @@ const AddTicketFormPage = () => {
         if (userRole?.toLowerCase() === 'member') {
           navigate('/members/ticket');
         } else {
-          navigate('/tickets');
+          navigate('/staff/tickets');
         }
       }, 2000);
       
