@@ -29,6 +29,7 @@ import Exercises from './pages/Exercises.jsx';
 import authService from './services/authService';
 import AddStaff from './pages/Staff/AddStaff';
 import UpdateStaff from './pages/Staff/UpdateStaff';
+import { Analytics } from "@vercel/analytics/react";
 
 
 function App() {  // Add authentication checks
@@ -145,6 +146,7 @@ function App() {  // Add authentication checks
         {/*Default Redirect*/}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>     
+      <Analytics />
     </Router>
   );
 }
